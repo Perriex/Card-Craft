@@ -1,10 +1,12 @@
 import React from "react";
+import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { ThemeProvider } from "@mui/material";
 
-import theme from "@CardCraft/style/theme";
+import { store } from "@CardCraft/app/store";
 import Sidebar from "@CardCraft/components/Sidebar";
+import theme from "@CardCraft/style/theme";
 
 import "./App.css";
 
@@ -14,17 +16,19 @@ const CardPage = React.lazy(() => import("@CardCraft/pages/Card"));
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/add" element={<CardPage />} />
-          <Route path="/edit/:id" element={<CardPage />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </BrowserRouter>
-      <Sidebar />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/add" element={<CardPage />} />
+            <Route path="/edit/:id" element={<CardPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </BrowserRouter>
+        <Sidebar />
+      </ThemeProvider>
+    </Provider>
   );
 }
 
