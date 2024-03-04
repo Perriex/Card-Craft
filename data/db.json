@@ -1,0 +1,30 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "firstNameOfHolder": "Parna",
+      "lastNameOfHolder": "Asadi",
+      "card": "5892101308168019",
+      "IBAN": "IR0696000000010324200001",
+      "account": "0202901868005",
+      "expire": "2024-06-18",
+      "status": true,
+      "description": "This is a card",
+      "createdAt": "2024-03-04",
+      "updatedAt": "2024-03-04"
+    },
+    {
+      "id": 2,
+      "firstNameOfHolder": "Parna",
+      "lastNameOfHolder": "Asadi",
+      "card": "5892101308168019",
+      "IBAN": "IR0696000000010324200001",
+      "account": "0202901868005",
+      "expire": "2024-06-18",
+      "status": false,
+      "description": "This is a card",
+      "createdAt": "2024-03-04",
+      "updatedAt": "2024-03-04"
+    }
+  ]
+}
