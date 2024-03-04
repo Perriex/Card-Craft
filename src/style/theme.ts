@@ -19,6 +19,9 @@ declare module "@mui/material/styles" {
 }
 
 const theme = createTheme({
+  typography: {
+    fontFamily: ["Andika", "sans-serif"].join(","),
+  },
   figmaPalette: {
     footer: "#7B7B7B",
     typography: "#000F10",

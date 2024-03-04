@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Andika";
+  font-style: normal;
+  src: url("./assets/font/Andika-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Andika", sans-serif;
+  margin: 0;
+  padding: 0;
+}
