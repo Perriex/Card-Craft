@@ -1,5 +1,7 @@
 import { createTheme } from "@mui/material";
 
+import { FigmaColors } from "./colors";
+
 declare module "@mui/material/styles" {
   interface Theme {
     figmaPalette: {
@@ -36,14 +38,14 @@ const theme = createTheme({
           minHeight: "40px",
         },
         containedPrimary: {
-          backgroundColor: "#3ACCD2",
+          backgroundColor: FigmaColors.primary,
 
           ":hover": {
-            backgroundColor: "#22C5CC",
+            backgroundColor: FigmaColors.primaryHover,
           },
         },
         outlinedError: {
-          borderColor: "#FF3A3A",
+          borderColor: FigmaColors.error,
         },
       },
     },
@@ -51,7 +53,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           boxShadow: "none",
-          border: "1px solid #EFEFEF",
+          border: "1px solid " + FigmaColors.border,
           borderRadius: "6px",
         },
       },
@@ -71,13 +73,13 @@ const theme = createTheme({
     MuiTableCell: {
       styleOverrides: {
         root: {
-          borderBottomColor: "#EFEFEF",
+          borderBottomColor: FigmaColors.border,
           fontSize: 16,
           color: "#000F10",
         },
         head: {
-          backgroundColor: "#3ACCD2",
-          color: "#fff",
+          backgroundColor: FigmaColors.primary,
+          color: "white",
           fontSize: 16,
         },
       },
@@ -85,17 +87,17 @@ const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          color: "#000F10",
+          color: FigmaColors.typography,
         },
       },
     },
   },
   figmaPalette: {
-    footer: "#7B7B7B",
-    typography: "#000F10",
-    primary: "#3ACCD2",
-    success: "#57CE44",
-    error: "#FF3A3A",
+    footer: FigmaColors.disabled,
+    typography: FigmaColors.typography,
+    primary: FigmaColors.primary,
+    success: FigmaColors.success,
+    error: FigmaColors.error,
   },
 });
 

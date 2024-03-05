@@ -1,5 +1,6 @@
-import theme from "@CardCraft/style/theme";
 import { Typography } from "@mui/material";
+
+import theme from "@CardCraft/style/theme";
 
 export default function Footer() {
   return (

@@ -9,11 +9,11 @@ import {
   Paper,
 } from "@mui/material";
 
-import SearchIcon from "@CardCraft/assets/svg/Search.svg";
-
 import CardTable from "@CardCraft/components/Table";
 
 import useHome from "@CardCraft/pages/api/Home";
+
+import SearchIcon from "@CardCraft/assets/svg/Search.svg";
 
 export default function HomePage() {
   const { term, data, deleteCard, setTerm } = useHome();

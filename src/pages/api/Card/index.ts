@@ -10,7 +10,7 @@ import { cardType } from "@CardCraft/types/card";
 import { useAppDispatch } from "@CardCraft/app/hooks";
 import { show } from "@CardCraft/features/toast/toastSlice";
 
-import { engine } from "../engine";
+import { engine } from "@CardCraft/pages/api/engine";
 
 const schema = yup.object({
   status: yup.bool().required(),

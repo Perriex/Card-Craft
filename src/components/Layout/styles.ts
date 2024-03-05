@@ -1,3 +1,5 @@
+// Old fasioned way to use styled-components
+
 export const LayoutStyles = {
   container: {
     marginLeft: "75px",
