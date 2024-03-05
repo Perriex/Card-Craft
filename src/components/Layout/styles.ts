@@ -6,7 +6,7 @@ export const LayoutStyles = {
   children: {
     minHeight: "65vh",
     padding: "32px",
-    minWidth:"80vw"
+    minWidth:"85vw"
   },
   wrapper:{
     padding: "0 0 0 52px "

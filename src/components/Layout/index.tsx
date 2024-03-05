@@ -17,7 +17,7 @@ export default function Layout(props: LayoutProps) {
     <>
       <Sidebar />
       <Container sx={LayoutStyles.container}>
-        <Container maxWidth="lg" sx={LayoutStyles.children}>
+        <Container sx={LayoutStyles.children}>
           <Brand />
           <div style={LayoutStyles.children}>{props.children}</div>
         </Container>
