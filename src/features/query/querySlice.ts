@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
+// ! Note
+// This is created to undo actions
+// For sample, implemented undo of DELETE action
+
 interface QueryState {
   cardId: number | null;
   previousValues: string | null;

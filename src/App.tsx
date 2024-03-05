@@ -1,12 +1,16 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { CircularProgress, Snackbar } from "@mui/material";
+import { Button, CircularProgress, IconButton, Snackbar } from "@mui/material";
 
 import Layout from "@CardCraft/components/Layout";
-import { useAppDispatch, useAppSelector } from "@CardCraft/app/hooks";
+import { useAppSelector } from "@CardCraft/app/hooks";
 
 import { hide, selectToast } from "@CardCraft/features/toast/toastSlice";
+
+import { useDelete } from "./pages/api/Undo/Delete";
+
+import CloseIcon from "@CardCraft/assets/svg/Close.svg";
 
 import "./App.css";
 
@@ -16,18 +20,15 @@ const CardPage = React.lazy(() => import("@CardCraft/pages/Card"));
 
 function App() {
   const toast = useAppSelector(selectToast);
-  const dispatch = useAppDispatch();
 
+  const { cardId, dispatch, undoDeletedCard } = useDelete();
+
+  const closeToast = () => dispatch(hide());
+  
   return (
     <BrowserRouter basename="/">
       <Layout>
-        <Suspense
-          fallback={
-            <>
-              <CircularProgress size={32} />
-            </>
-          }
-        >
+        <Suspense fallback={<CircularProgress size={32} />}>
           <Routes>
             <Route index element={<HomePage />} />
             <Route path="/add" element={<CardPage />} />
@@ -39,7 +40,28 @@ function App() {
           open={toast.open}
           autoHideDuration={5000}
           message={toast.message}
-          onClose={() => dispatch(hide())}
+          onClose={closeToast}
+          action={
+            <React.Fragment>
+              {cardId && (
+                <Button
+                  color="secondary"
+                  size="small"
+                  onClick={undoDeletedCard}
+                >
+                  UNDO
+                </Button>
+              )}
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                sx={{ p: 0.5 }}
+                onClick={closeToast}
+              >
+                <img src={CloseIcon} alt="Close Icon" />
+              </IconButton>
+            </React.Fragment>
+          }
         />
       </Layout>
     </BrowserRouter>

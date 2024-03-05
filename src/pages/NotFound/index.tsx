@@ -1,5 +1,10 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 export default function NotFoundPage() {
-  return <Container>404</Container>;
+  return (
+    <Container>
+      <Typography variant="h5">404</Typography>
+      <Typography variant="subtitle1">Page not found!</Typography>
+    </Container>
+  );
 }
