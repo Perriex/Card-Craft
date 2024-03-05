@@ -11,7 +11,7 @@ const useHome = () => {
 
   const [term, setTerm] = useState("");
 
-  const deleteCard = (id: number) => {
+  const deleteCard = (id: number | string) => {
     engine
       .delete("/cards/" + id)
       .then(() => callback().then(setRows))
