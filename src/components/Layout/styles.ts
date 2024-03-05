@@ -4,7 +4,11 @@ export const LayoutStyles = {
     width: "90vw",
   },
   children: {
-    minHeight: "95vh",
+    minHeight: "65vh",
     padding: "32px",
+    minWidth:"80vw"
   },
+  wrapper:{
+    padding: "0 0 0 52px "
+  } 
 };

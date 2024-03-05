@@ -19,7 +19,7 @@ export default function Layout(props: LayoutProps) {
       <Container sx={LayoutStyles.container}>
         <Container maxWidth="lg" sx={LayoutStyles.children}>
           <Brand />
-          <div style={{ padding: "0 52px" }}>{props.children}</div>
+          <div style={LayoutStyles.children}>{props.children}</div>
         </Container>
         <Footer />
       </Container>
