@@ -7,6 +7,8 @@ import { show } from "@CardCraft/features/toast/toastSlice";
 
 import useFetchAPI, { engine } from "@CardCraft/pages/api/engine";
 
+// hook pattern
+
 const useHome = () => {
   const dispatch = useAppDispatch();
 
@@ -17,6 +19,7 @@ const useHome = () => {
   const [term, setTerm] = useState("");
 
   const deleteCard = (id: number | string) => {
+    // for undo action
     engine({
       url: "/cards/" + id,
       method: "GET",
@@ -31,6 +34,8 @@ const useHome = () => {
         );
       })
       .catch(console.error);
+
+    // main action
     engine
       .delete("/cards/" + id)
       .then(() => {

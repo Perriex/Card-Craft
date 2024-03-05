@@ -59,7 +59,7 @@ export default function CardTable(props: TableProps) {
         <TableBody>
           {props.rows ? (
             props.rows
-              .slice(page * RowPerPage, page * RowPerPage + RowPerPage)
+              .slice(page * RowPerPage, page * RowPerPage + RowPerPage) // ! pagination
               .map((row) => (
                 <TableRow key={row.id}>
                   <TableCell component="th" scope="row">

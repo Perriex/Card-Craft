@@ -15,7 +15,7 @@ const useFetchAPI = (
   method: ApiMethodType = "GET",
   payload?: unknown
 ) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); // not used!
 
   async function callback() {
     try {

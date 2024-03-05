@@ -29,7 +29,7 @@ export default function HomePage() {
                 inputProps={{ "aria-label": "search cards" }}
                 sx={{ width: "225px" }}
                 value={term}
-                onChange={(e) => setTerm(e.target.value.replace("\\", ""))} // regex call
+                onChange={(e) => setTerm(e.target.value.replace("\\", ""))} // ! regex call!
               />
               <IconButton type="button" aria-label="search">
                 <img src={SearchIcon} alt="Search Icon" />
