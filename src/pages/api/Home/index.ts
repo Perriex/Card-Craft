@@ -23,8 +23,7 @@ const useHome = () => {
       return (
         rows?.filter(
           (item) =>
-            new RegExp(term, "ig").test(item.firstNameOfHolder) ||
-            new RegExp(term, "ig").test(item.lastNameOfHolder) ||
+            new RegExp(term, "ig").test(item.nameOfHolder) ||
             new RegExp(term, "ig").test(item.account)
         ) ?? []
       );

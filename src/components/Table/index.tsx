@@ -25,7 +25,7 @@ import theme from "@CardCraft/style/theme";
 
 interface TableProps {
   rows: cardType[] | null;
-  deleteRow: (id: number) => void;
+  deleteRow: (id: number | string) => void;
 }
 
 const RowPerPage = 5;
@@ -63,7 +63,7 @@ export default function CardTable(props: TableProps) {
               .map((row) => (
                 <TableRow key={row.id}>
                   <TableCell component="th" scope="row">
-                    {[row.firstNameOfHolder, row.lastNameOfHolder].join(" ")}
+                    {row.nameOfHolder}
                   </TableCell>
                   <TableCell align="left">{row.account}</TableCell>
                   <TableCell align="left">
@@ -85,7 +85,9 @@ export default function CardTable(props: TableProps) {
                       />
                     )}
                   </TableCell>
-                  <TableCell align="left">{row.expire}</TableCell>
+                  <TableCell align="left">
+                    {[row.expireMonth, row.expireMonth].join("-")}
+                  </TableCell>
                   <TableCell align="left">{row.createdAt}</TableCell>
                   <TableCell align="left">{row.updatedAt}</TableCell>
                   <TableCell align="left">
