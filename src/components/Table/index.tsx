@@ -86,7 +86,7 @@ export default function CardTable(props: TableProps) {
                     )}
                   </TableCell>
                   <TableCell align="left">
-                    {[row.expireMonth, row.expireMonth].join("-")}
+                    {[row.expireYear, row.expireMonth].join("-")}
                   </TableCell>
                   <TableCell align="left">{row.createdAt}</TableCell>
                   <TableCell align="left">{row.updatedAt}</TableCell>

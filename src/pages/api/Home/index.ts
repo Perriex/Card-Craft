@@ -24,7 +24,7 @@ const useHome = () => {
         rows?.filter(
           (item) =>
             new RegExp(term, "ig").test(item.nameOfHolder) ||
-            new RegExp(term, "ig").test(item.account)
+            item.account.includes(term)
         ) ?? []
       );
     else return rows;
