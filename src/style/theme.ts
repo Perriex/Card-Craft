@@ -29,22 +29,28 @@ const theme = createTheme({
   components: {
     MuiButton: {
       styleOverrides: {
-        containedPrimary: {
-          backgroundColor: "#3ACCD2",
+        root: {
           boxShadow: "none",
           borderRadius: "12px",
           textTransform: "inherit",
           minHeight: "40px",
+        },
+        containedPrimary: {
+          backgroundColor: "#3ACCD2",
+
           ":hover": {
             backgroundColor: "#22C5CC",
           },
+        },
+        outlinedError: {
+          borderColor: "#FF3A3A",
         },
       },
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",
+          boxShadow: "none",
           border: "1px solid #EFEFEF",
           borderRadius: "6px",
         },
