@@ -13,7 +13,7 @@ const initialState: QueryState = {
   action: null,
 };
 
-export const quertSlice = createSlice({
+export const querySlice = createSlice({
   name: "query",
   initialState,
   reducers: {
@@ -30,6 +30,6 @@ export const quertSlice = createSlice({
   },
 });
 
-export const { add, remove } = quertSlice.actions;
+export const { add, remove } = querySlice.actions;
 
-export default quertSlice.reducer;
+export default querySlice.reducer;
