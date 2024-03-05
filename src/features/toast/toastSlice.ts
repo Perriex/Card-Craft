@@ -20,10 +20,14 @@ export const toastSlice = createSlice({
       state.open = true;
       state.message = action.payload;
     },
+    hide: (state) => {
+      state.open = false;
+      state.message = undefined;
+    },
   },
 });
 
-export const { show } = toastSlice.actions;
+export const { show,hide } = toastSlice.actions;
 
 export const selectToast = (state: RootState) => state.toast;
 

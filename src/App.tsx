@@ -4,9 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CircularProgress, Snackbar } from "@mui/material";
 
 import Layout from "@CardCraft/components/Layout";
-import { useAppSelector } from "@CardCraft/app/hooks";
+import { useAppDispatch, useAppSelector } from "@CardCraft/app/hooks";
 
-import { selectToast } from "@CardCraft/features/toast/toastSlice";
+import { hide, selectToast } from "@CardCraft/features/toast/toastSlice";
 
 import "./App.css";
 
@@ -16,6 +16,7 @@ const CardPage = React.lazy(() => import("@CardCraft/pages/Card"));
 
 function App() {
   const toast = useAppSelector(selectToast);
+  const dispatch = useAppDispatch();
 
   return (
     <BrowserRouter basename="/">
@@ -38,6 +39,7 @@ function App() {
           open={toast.open}
           autoHideDuration={5000}
           message={toast.message}
+          onClose={() => dispatch(hide())}
         />
       </Layout>
     </BrowserRouter>
