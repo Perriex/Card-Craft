@@ -76,6 +76,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: "#000F10",
+        },
+      },
+    },
   },
   figmaPalette: {
     footer: "#7B7B7B",

@@ -13,7 +13,7 @@ export default function Brand() {
         </Grid>
         <Grid item>
           <Grid>
-            <Typography variant="h5" color={theme.figmaPalette.typography}>
+            <Typography variant="h5">
               Card Craft
             </Typography>
           </Grid>
