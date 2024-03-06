@@ -5,7 +5,7 @@ import { Container, Grid, IconButton } from "@mui/material";
 import WhiteLogoIcon from "@CardCraft/assets/svg/WhiteLogo.svg";
 import HomeIcon from "@CardCraft/assets/svg/Home.svg";
 import AddCardIcon from "@CardCraft/assets/svg/AddCard.svg";
-import InfoIcon from "@CardCraft/assets/svg/info.svg";
+import InfoIcon from "@CardCraft/assets/svg/Info.svg";
 
 import { SidebarStyles } from "./styles";
 
