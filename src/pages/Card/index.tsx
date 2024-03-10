@@ -30,8 +30,8 @@ export default function CardPage() {
                 {id ? "Edit Card #" + id : "Add New Card"}
               </Typography>
             </Grid>
-            {FormItems.map((row) => (
-              <Grid container gap={"10px"} alignItems={"center"}>
+            {FormItems.map((row, index) => (
+              <Grid container gap={"10px"} alignItems={"center"} key={index}>
                 <Grid item sx={{ minWidth: "70px" }}>
                   <Typography fontSize={12}>{row.label}</Typography>
                 </Grid>

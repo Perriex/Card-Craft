@@ -27,6 +27,8 @@ const schema = yup.object({
   expireYear: yup.string().min(0).max(99).required(),
 
   description: yup.string(),
+
+  id: yup.string(),
 });
 
 const useCard = () => {
@@ -57,6 +59,7 @@ const useCard = () => {
       description: "",
       createdAt: today,
       updatedAt: today,
+      id,
     },
     resolver: yupResolver(schema),
   });
@@ -97,6 +100,7 @@ const useCard = () => {
           setValue("description", res.data.description);
           setValue("createdAt", res.data.createdAt);
           setValue("updatedAt", today);
+          setValue("id", res.data.id);
         })
         .catch(() => {
           dispatch(show("No card found by this id!"));
